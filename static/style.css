@@ -1,0 +1,173 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    color: #333;
+    min-height: 100vh;
+    padding: 40px 15px;   
+    box-sizing: border-box;
+}
+
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;   
+    max-width: 420px;
+    margin: auto 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: opacity 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.flash {
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+}
+
+.flash.success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.flash.danger { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+.flash.info { background: #cce5ff; color: #004085; border: 1px solid #b8daff; }
+
+
+.dashboard .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard h2 span { color: #764ba2; }
+.logout-btn { background: #dc3545; }
+.view-users-btn { background: #007bff; }
+
+.task-form {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.task-form input[type="text"] {
+    flex-grow: 1;
+    margin: 5;
+}
+
+.task-form button {
+    width: auto;
+    padding: 12px 20px;
+    margin: 2;
+}
+
+.task-list {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.task-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #667eea;
+}
+
+.task-list li.completed {
+    border-left: 5px solid #28a745;
+}
+
+.task-list li.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-actions {
+    white-space: nowrap;
+}
+
+.task-actions a {
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.task-actions .delete-link {
+    color: #dc3545;
+}
+
+.task-actions .edit-link {
+    color: #1d64df;
+}

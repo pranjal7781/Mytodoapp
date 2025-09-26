@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Your Task</h2>
+        
+        <form method="POST">
+            <div class="input-group">
+                <input type="text" name="task_content" value="{{ task.task_content }}" required>
+            </div>
+            <button type="submit">Save Changes</button>
+        </form>
+        <p><a href="{{ url_for('dashboard') }}">Cancel</a></p>
+    </div>
+</body>
+</html>

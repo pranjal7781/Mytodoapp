@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container dashboard">
+        <div class="header">
+            <h2>Welcome, <span>{{ username }}</span>!</h2>
+            <a href="{{ url_for('logout') }}"><button class="logout-btn">Logout</button></a>
+        </div>
+        
+        <hr>
+
+        <div class="task-form">
+            <h3>Add a New Task</h3>
+            <form action="{{ url_for('add_task') }}" method="POST">
+                <input type="text" name="task_content" placeholder="What do you need to do?" required>
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+
+        <div class="task-list">
+            <h3>Your Tasks</h3>
+            {% if tasks %}
+                <ul>
+                    {% for task in tasks %}
+                        <li class="{{ 'completed' if task.is_completed else '' }}">
+                            <span class="task-text">{{ task.task_content }}</span>
+                            <div class="task-actions">
+                                <a href="{{ url_for('edit_task', task_id=task.id) }}" class="edit-link">Edit</a>
+                                
+                                <a href="{{ url_for('update_task', task_id=task.id) }}">
+                                    {{ 'Undo' if task.is_completed else 'Complete' }}
+                                </a>
+
+                                <a href="{{ url_for('delete_task', task_id=task.id) }}" class="delete-link">Delete</a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>You have no tasks yet. Add one above!</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
