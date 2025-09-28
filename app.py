@@ -11,9 +11,9 @@ app.secret_key = "super_secret_key_change_me"
 try:
     conn = mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="Msdian@1929#", 
-        database="flask_app"
+        user="YOUR USERNAME ",
+        password="YOUR PASSWORD HERE", 
+        database="DATABASE NAME"
     )
     cursor = conn.cursor(dictionary=True)
 except mysql.connector.Error as err:
@@ -211,4 +211,5 @@ def logout():
     return redirect(url_for('login'))
 
 if __name__ == '__main__':
+
     app.run(debug=True)
