@@ -27,7 +27,7 @@ To run this project locally, follow these steps:
 Make sure you have the following installed on your system:
 * Python (3.8 or higher)
 * Git
-* MySQL Server (or another SQL database)
+* MsSQL
 
 ### 2. Create `requirements.txt`
 
