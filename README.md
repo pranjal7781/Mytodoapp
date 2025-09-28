@@ -14,7 +14,7 @@ A secure, multi-user to-do list application built with Python and the Flask web 
 ## 🛠️ Technologies Used
 
 * **Backend:** Python, Flask
-* **Database:** MsSQL server
+* **Database:** MySQL
 * **Templating:** Jinja2
 * **Frontend:** HTML, CSS
 
@@ -27,7 +27,7 @@ To run this project locally, follow these steps:
 Make sure you have the following installed on your system:
 * Python (3.8 or higher)
 * Git
-* MsSQL
+* MySQL
 
 ### 2. Create `requirements.txt`
 
@@ -66,7 +66,7 @@ pip install -r requirements.txt
 
 ### 4. Database Setup
 
-1.  Log in to your MsSQL server.
+1.  Log in to your MySQL server.
 2.  Create a new database for the project.
     ```sql
     CREATE DATABASE flask_app;
