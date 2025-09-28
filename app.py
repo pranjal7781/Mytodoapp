@@ -183,8 +183,6 @@ def edit_task(task_id):
         cursor.execute("UPDATE tasks SET task_content = %s WHERE id = %s AND user_id = %s", 
                        (new_content, task_id, user_id))
         conn.commit()
-        
-        # flash("✏️ Task updated successfully!", "success")
         return redirect(url_for('dashboard'))
     
     else:
@@ -210,4 +208,5 @@ def logout():
 if __name__ == '__main__':
 
     app.run(debug=True)
+
 
