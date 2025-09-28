@@ -66,7 +66,7 @@ pip install -r requirements.txt
 
 ### 4. Database Setup
 
-1.  Log in to your MySQL server.
+1.  Log in to your MsSQL server.
 2.  Create a new database for the project.
     ```sql
     CREATE DATABASE flask_app;
