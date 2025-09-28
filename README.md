@@ -14,7 +14,7 @@ A secure, multi-user to-do list application built with Python and the Flask web 
 ## 🛠️ Technologies Used
 
 * **Backend:** Python, Flask
-* **Database:** MySQL (can be easily adapted for MS SQL Server or others)
+* **Database:** MsSQL server
 * **Templating:** Jinja2
 * **Frontend:** HTML, CSS
 
