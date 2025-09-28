@@ -132,8 +132,6 @@ def add_task():
     # Insert the new task into the database
     cursor.execute("INSERT INTO tasks (user_id, task_content) VALUES (%s, %s)", (user_id, task_content))
     conn.commit()
-    
-    # flash("✅ Task added successfully!", "success")
     return redirect(url_for('dashboard'))
 
 # --- NEW: Route to Update a Task (Complete/Undo) ---
@@ -151,7 +149,6 @@ def update_task(task_id):
         new_status = not task['is_completed']
         cursor.execute("UPDATE tasks SET is_completed = %s WHERE id = %s", (new_status, task_id))
         conn.commit()
-        # flash("👍 Task status updated!", "info")
     
     return redirect(url_for('dashboard'))
 
@@ -163,7 +160,7 @@ def delete_task(task_id):
 
     cursor.execute("DELETE FROM tasks WHERE id = %s", (task_id,))
     conn.commit()
-    # flash("🗑️ Task deleted successfully.", "success")
+    
     
     return redirect(url_for('dashboard'))
 
@@ -213,3 +210,4 @@ def logout():
 if __name__ == '__main__':
 
     app.run(debug=True)
+
