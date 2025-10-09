@@ -10,7 +10,6 @@ A secure, multi-user to-do list application built with Python and the Flask web 
 * **Task Management:** Users can add new tasks, edit existing task descriptions, mark tasks as complete, and delete tasks.
 * **Responsive Design:** A clean and modern UI that works on both desktop and mobile browsers.
 
-
 ## 🛠️ Technologies Used
 
 * **Backend:** Python, Flask
