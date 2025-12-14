@@ -94,7 +94,7 @@ pip install -r requirements.txt
     );
     ```
 
-### 5. Configure the Application
+### 5. Configure the Application 
 
 Open the `app.py` file and update the MySQL connection details with your own credentials:
 
